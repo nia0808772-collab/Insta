@@ -1,0 +1,116 @@
+/* --- GAYA DASAR & RESPONSIVE LAYOUT --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fafafa;
+    color: #262626;
+    padding: 20px 10px;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #1e3a8a;
+    font-size: 20px;
+}
+
+/* --- GAYA HALAMAN ADMIN (admin.html) --- */
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    resize: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-family: inherit;
+}
+
+textarea:focus {
+    border-color: #0095f6;
+    outline: none;
+}
+
+button {
+    background-color: #0095f6;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #0077c6;
+}
+
+/* --- GAYA TIMELINE & KARTU UTAMA (index.html) --- */
+.post-card {
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #dbdbdb;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.post-content {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+}
+
+/* --- TOMBOL LIKE INTERAKTIF --- */
+.btn-like {
+    background: #f3f4f6;
+    color: #4b5563;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    width: auto; /* Agar tombol tidak melebar penuh di dalam kartu */
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+}
+
+/* Efek visual ketika status sudah pernah di-like oleh user */
+.btn-like.liked {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.btn-delete {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    width: auto;
+    /* Agar tidak melebar penuh */
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-delete:hover {
+    background-color: #dc2626;
+}
