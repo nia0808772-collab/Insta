@@ -75,7 +75,7 @@ async function postingStatus() {
 // 5, Fungsi untuk memuat timeline dari Firestore
 // (digunakan di halaman index.html)
  // Suara ketika ada postingan baru
-const suaraPostBaru = new Audio("sounds/notifikasi.mp3")
+const suaraPostinganBaru = new Audio("sounds/notifikasi.mp3")
 
 function muatTimeline() {
     if (!document.getElementById("timeline")) return
