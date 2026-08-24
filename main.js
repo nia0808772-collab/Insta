@@ -75,24 +75,27 @@ async function postingStatus() {
 // 5, Fungsi untuk memuat timeline dari Firestore
 // (digunakan di halaman index.html)
  // Suara ketika ada postingan baru
-const suaraPostinganBaru = new Audio("sounds/notifikasi.mp3")
+
 
 function muatTimeline() {
+    // Cek dulu apakah elemen 'timeline' ada di halaman ini
     if (!document.getElementById("timeline")) return
 
     const q = query(medsosCollection, orderBy("waktu", "desc"))
     const daftarLike = JSON.parse(localStorage.getItem("SUDAH_LIKE")) || []
 
+    // Siapkan suara notifikasi
+    const suaraPostinganBaru = new Audio("notifikasi.mp3")
+
     let jumlahPostinganSebelumnya = null
 
     onSnapshot(q, (snapshot) => {
-        // Jika bukan pertama kali memuat data dan jumlah postingan bertambah
+        // Jika bukan pertama kali mengambil data
         if (
             jumlahPostinganSebelumnya !== null &&
             snapshot.size > jumlahPostinganSebelumnya
         ) {
-            suaraPostBaru.currentTime = 0
-            suaraPostBaru.play().catch((error) => {
+            suaraPostinganBaru.play().catch((error) => {
                 console.log("Suara tidak dapat diputar:", error)
             })
         }
@@ -109,10 +112,7 @@ function muatTimeline() {
             output += `
                 <div class="post-card">
                     <div class="post-content">${data.konten}</div>
-
-                    <button id="btn-like-${id}"
-                        class="btn-like ${sudahLike}"
-                        onclick="sukaStatus('${id}')">
+                    <button id="btn-like-${id}" class="btn-like ${sudahLike}" onclick="sukaStatus('${id}')">
                         ❤️ ${data.likes} Likes
                     </button>
                 </div>
