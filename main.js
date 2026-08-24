@@ -75,31 +75,7 @@ async function postingStatus() {
 // 5, Fungsi untuk memuat timeline dari Firestore
 // (digunakan di halaman index.html)
  // Suara ketika ada postingan baru
-// Suara notifikasi
 const suaraPostBaru = new Audio("sounds/notifikasi.mp3")
-
-// Fungsi mengaktifkan notifikasi suara
-window.aktifkanNotifikasi = function () {
-    suaraPostBaru.currentTime = 0
-
-    suaraPostBaru.play()
-        .then(() => {
-            suaraPostBaru.pause()
-            suaraPostBaru.currentTime = 0
-
-            localStorage.setItem("NOTIFIKASI_AKTIF", "true")
-
-            document.getElementById("btnNotifikasi").innerHTML =
-                "🔔 Notifikasi Aktif"
-
-            alert("Notifikasi suara berhasil diaktifkan!")
-        })
-        .catch((error) => {
-            console.log("Gagal mengaktifkan suara:", error)
-            alert("Gagal mengaktifkan suara.")
-        })
-}
-
 
 function muatTimeline() {
     if (!document.getElementById("timeline")) return
