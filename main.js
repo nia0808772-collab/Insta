@@ -85,7 +85,7 @@ function muatTimeline() {
     const daftarLike = JSON.parse(localStorage.getItem("SUDAH_LIKE")) || []
 
     // Siapkan suara notifikasi
-    const suaraPostinganBaru = new Audio("notifikasi.mp3")
+    const suaraPostinganBaru = new Audio("noti.mp3")
 
     let jumlahPostinganSebelumnya = null
 
