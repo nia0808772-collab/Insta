@@ -142,12 +142,14 @@ async function sukaStatus(idDokumen) {
         daftarLike.push(idDokumen)
         localStorage.setItem("SUDAH_LIKE", JSON.stringify(daftarLike))
 
+         const suaraLike = new Audio("like.mp3")
+         
         // 3. 🚀 TAMBAHKAN CLASS 'liked' SECARA INSTAN KE TOMBOL
         const tombol = document.getElementById(`btn-like-${idDokumen}`)
         if (tombol) {
             tombol.classList.add("liked")
         }
-
+        suaraLike.play()
         // 4. Tampilkan notifikasi toast
         tampilToast("❤️ Terima kasih sudah memberi Like!")
 
