@@ -142,13 +142,15 @@ async function sukaStatus(idDokumen) {
         daftarLike.push(idDokumen)
         localStorage.setItem("SUDAH_LIKE", JSON.stringify(daftarLike))
 
-         const suaraLike = new Audio("like.mp3")
+          
          
         // 3. 🚀 TAMBAHKAN CLASS 'liked' SECARA INSTAN KE TOMBOL
         const tombol = document.getElementById(`btn-like-${idDokumen}`)
         if (tombol) {
             tombol.classList.add("liked")
         }
+        bunyiLike()
+        
         suaraLike.play()
         // 4. Tampilkan notifikasi toast
         tampilToast("❤️ Terima kasih sudah memberi Like!")
@@ -158,7 +160,22 @@ async function sukaStatus(idDokumen) {
         tampilToast("❌ Gagal memberikan like.")
     }
 }
+function bunyiLike() {
+    const audio = new AudioContext()
+    const oscillator = audio.createOscillator()
+    const gain = audio.createGain()
 
+    oscillator.frequency.value = 800
+    oscillator.connect(gain)
+    gain.connect(audio.destination)
+
+    oscillator.start()
+    gain.gain.exponentialRampToValueAtTime(0.0001, audio.currentTime + 0.2)
+    oscillator.stop(audio.currentTime + 0.2)
+}
+
+ 
+ 
 // 7. Fungsi untuk memuat daftar postingan di admin.html beserta tombol Hapus
 function muatDaftarAdmin() {
     if (!document.getElementById("daftarAdmin")) return
