@@ -150,8 +150,7 @@ async function sukaStatus(idDokumen) {
             tombol.classList.add("liked")
         }
         bunyiLike()
-        
-        suaraLike.play()
+   
         // 4. Tampilkan notifikasi toast
         tampilToast("❤️ Terima kasih sudah memberi Like!")
 
