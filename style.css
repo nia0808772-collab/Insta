@@ -140,3 +140,307 @@ button:hover {
     opacity: 1;
     top: 50px;
 }
+
+/* HEADER */
+.header {
+  background: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin: -20px -10px 0;
+}
+
+.header h2 {
+  color: white;
+  margin-bottom: 5px;
+}
+
+.header p {
+  font-size: 14px;
+}
+
+/* MENU */
+.menu {
+  background: white;
+  padding: 12px;
+  text-align: center;
+  margin: 0 -10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.menu a {
+  text-decoration: none;
+  color: #1e3a8a;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+/* KOTAK ADMIN */
+.admin-box {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+/* TOMBOL EDIT */
+.btn-edit {
+  background-color: #f59e0b;
+  color: white;
+  width: auto;
+  padding: 8px 14px;
+  margin-right: 5px;
+}
+
+.btn-edit:hover {
+  background-color: #d97706;
+}
+
+/* TOMBOL HAPUS */
+.btn-delete {
+  background-color: #ef4444;
+  color: white;
+  width: auto;
+  padding: 8px 14px;
+}
+
+.btn-delete:hover {
+  background-color: #dc2626;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+  background: #1e3a8a;
+  color: white;
+  font-size: 13px;
+}
+
+/* =================================
+   TAMPILAN BERANDA
+================================= */
+
+.home-page {
+    background: #f5f8ff;
+}
+
+/* Header Beranda */
+.home-header {
+    background: #0797e6;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    margin: -20px -10px 0;
+}
+
+.home-header .logo {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.home-header .subtitle {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+/* Judul Beranda */
+.home-title {
+    margin: 25px 0;
+}
+
+.home-title h2 {
+    color: #17428b;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.home-title p {
+    color: #777;
+}
+
+
+/* =================================
+   TAMPILAN ADMIN
+================================= */
+
+.admin-page {
+    background: #f0f4f8;
+}
+
+/* Header Admin dibuat berbeda */
+.admin-header {
+    background: #172b4d;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    margin: -20px -10px 0;
+}
+
+.admin-header .logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.admin-header .subtitle {
+    font-size: 16px;
+    margin-top: 5px;
+    color: #d9e2f3;
+}
+
+/* Menu */
+.menu {
+    background: white;
+    padding: 15px;
+    text-align: center;
+    margin: 0 -10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.menu a {
+    text-decoration: none;
+    color: #2874a6;
+    font-weight: bold;
+    margin: 0 12px;
+}
+
+.menu a.active {
+    color: #0b8edb;
+}
+
+
+/* =================================
+   FORM ADMIN
+================================= */
+
+.admin-form {
+    background: white;
+    padding: 22px;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+}
+
+.admin-form h2 {
+    color: #172b4d;
+    margin-bottom: 8px;
+}
+
+.admin-info {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* Textarea Admin */
+.admin-form textarea {
+    min-height: 150px;
+    border: 2px solid #d9e2ec;
+    border-radius: 12px;
+}
+
+/* Tombol Posting */
+.btn-post {
+    background: #0797e6;
+    font-size: 15px;
+}
+
+.btn-post:hover {
+    background: #087fbe;
+}
+
+
+/* =================================
+   DAFTAR ADMIN
+================================= */
+
+.admin-list {
+    background: white;
+    padding: 22px;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+.admin-list h2 {
+    color: #172b4d;
+    margin-bottom: 8px;
+}
+
+
+/* =================================
+   TOMBOL EDIT
+================================= */
+
+.btn-edit {
+    background: #f59e0b !important;
+    color: white;
+    width: auto !important;
+    padding: 9px 15px !important;
+    margin-right: 5px;
+}
+
+.btn-edit:hover {
+    background: #d97706 !important;
+}
+
+
+/* =================================
+   TOMBOL HAPUS
+================================= */
+
+.btn-delete {
+    background: #ef4444 !important;
+    color: white;
+    width: auto !important;
+    padding: 9px 15px !important;
+}
+
+.btn-delete:hover {
+    background: #dc2626 !important;
+}
+
+
+/* =================================
+   FOOTER BERANDA
+================================= */
+
+.home-footer {
+    background: #0797e6;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin: 40px -10px -20px;
+}
+
+.home-footer b {
+    font-size: 20px;
+}
+
+.home-footer p {
+    margin-top: 5px;
+}
+
+
+/* =================================
+   FOOTER ADMIN
+================================= */
+
+.admin-footer {
+    background: #172b4d;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin: 40px -10px -20px;
+}
+
+.admin-footer b {
+    font-size: 20px;
+}
+
+.admin-footer p {
+    margin-top: 5px;
+}

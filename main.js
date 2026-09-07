@@ -193,8 +193,10 @@ function muatDaftarAdmin() {
                 output += `
                     <div class="post-card">
                         <div class="post-content">${data.konten}</div>
-                        <button class="btn-delete" onclick="hapusStatus('${id}')">
-                            🗑️ Hapus Post
+                        <button class="btn-edit" onclick="editStatus('${id}')">
+                    ✏️ Edit
+                                                <button class="btn-delete" onclick="hapusStatus('${id}')">
+                        🗑️ Hapus Post
                         </button>
                     </div>
                 `
@@ -218,11 +220,42 @@ async function hapusStatus(idDokumen) {
     }
 }
 
+async function editStatus(idDokumen, isiLama) {
+
+  let isiBaru = prompt("✏️ Edit postingan:", isiLama)
+
+  if (isiBaru === null) return
+
+  isiBaru = isiBaru.trim()
+
+  if (isiBaru === "") {
+    tampilToast("⚠️ Postingan tidak boleh kosong!")
+    return
+  }
+
+  try {
+
+    await updateDoc(doc(db, "medsos", idDokumen), {
+      konten: isiBaru
+    })
+
+    tampilToast("✅ Postingan berhasil diedit!")
+
+  } catch (error) {
+
+    console.error(error)
+    tampilToast("❌ Gagal mengedit postingan.")
+
+  }
+}
+
+window.editStatus = editStatus
 
 // Daftarkan fungsi ke window scope agar bisa diakses dari HTML
 window.postingStatus = postingStatus
 window.sukaStatus = sukaStatus
 window.hapusStatus = hapusStatus
+window.editStatus = editStatus
 
 // Panggil fungsi muatTimeline dan muatDaftarAdmin saat halaman dimuat
 muatTimeline()

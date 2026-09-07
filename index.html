@@ -1,24 +1,51 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="id">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medsos Mini</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Medsos Mini - Beranda</title>
 
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <div class="container">
-        <h2>🚀 Timeline Status</h2>
-        <div id="timeline"></div>
+<body class="home-page">
+
+  <!-- HEADER BERANDA -->
+  <header class="home-header">
+    <div class="logo">🚀 Medsos Mini</div>
+    <div class="subtitle">Timeline Status</div>
+  </header>
+
+  <!-- MENU -->
+  <nav class="menu">
+    <a href="index.html" class="active">🏠 Beranda</a>
+    <a href="admin.html">📝 Buat Postingan</a>
+  </nav>
+
+  <!-- ISI BERANDA -->
+  <main class="container">
+
+    <div class="home-title">
+      <h2>🚀 Timeline Status</h2>
+      <p>Lihat postingan terbaru di Medsos Mini</p>
     </div>
 
-    <!-- Elemen Toast Popup -->
-    <div id="toast" class="toast"></div>
+    <div id="timeline"></div>
 
-    <script src="main.js" type="module"></script>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="home-footer">
+    <b>🚀 Medsos Mini</b>
+    <p>© 2026 Medsos Mini</p>
+  </footer>
+
+  <!-- TOAST -->
+  <div id="toast" class="toast"></div>
+
+  <script src="main.js" type="module"></script>
+
 </body>
 
 </html>

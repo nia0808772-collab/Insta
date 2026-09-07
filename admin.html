@@ -1,28 +1,76 @@
-<!DOCTYPE html>
-<html>
+ <!DOCTYPE html>
+<html lang="id">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Admin Posting</title>
-  
+  <title>Medsos Mini - Admin</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-  <div class="container">
-    </h2> 📝buat Postingan Baru</h2>
-    <textarea id="isiStatus" placeholder="Tulis sesuatu..."></textarea>
-    <button onclick="postingStatus()"> Kirim Status</button>
-    
-    <br></br>
-    <h4>Daftar Postingan Admin</h4>
-    <div id="daftarAdmin"></div>
-  </div>
-  
-  
-  
+<body class="admin-page">
+
+  <!-- HEADER ADMIN -->
+  <header class="admin-header">
+    <div class="logo">⚙️ Admin Medsos</div>
+    <div class="subtitle">Panel Pengelolaan Postingan</div>
+  </header>
+
+  <!-- MENU -->
+  <nav class="menu admin-menu">
+    <a href="index.html">🏠 Beranda</a>
+    <a href="admin.html" class="active">⚙️ Admin</a>
+  </nav>
+
+  <!-- ISI ADMIN -->
+  <main class="container">
+
+    <!-- FORM POSTING -->
+    <section class="admin-form">
+
+      <h2>📝 Buat Postingan Baru</h2>
+
+      <p class="admin-info">
+        Buat postingan untuk ditampilkan di halaman beranda.
+      </p>
+
+      <textarea
+        id="isiStatus"
+        placeholder="Tulis sesuatu..."></textarea>
+
+      <button class="btn-post" onclick="postingStatus()">
+        🚀 Kirim Status
+      </button>
+
+    </section>
+
+    <!-- DAFTAR POSTING -->
+    <section class="admin-list">
+
+      <h2>📋 Kelola Postingan</h2>
+
+      <p class="admin-info">
+        Kamu dapat mengedit atau menghapus postingan.
+      </p>
+
+      <div id="daftarAdmin"></div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="admin-footer">
+    <b>⚙️ Admin Medsos Mini</b>
+    <p>© 2026 Admin Posting</p>
+  </footer>
+
+  <!-- TOAST -->
+  <div id="toast" class="toast"></div>
+
   <script src="main.js" type="module"></script>
+
 </body>
 
 </html>
